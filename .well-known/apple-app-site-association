@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["757H5TUW8H.com.christopherbiguet.zuno"],
+        "components": [{ "/": "/reset.html", "comment": "Password reset links open the Zuno app" }],
+        "appID": "757H5TUW8H.com.christopherbiguet.zuno",
+        "paths": ["/reset.html"]
+      }
+    ]
+  }
+}
