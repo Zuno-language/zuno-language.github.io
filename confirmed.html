@@ -12,6 +12,11 @@
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<script>
+  // A password-reset link (e.g. sent from the Supabase dashboard) lands here too: hand it to the
+  // reset page, which opens the app on an iPhone and asks for the phone on a computer.
+  if (/type=recovery/.test(location.search + location.hash)) location.replace('reset.html' + location.search + location.hash);
+</script>
 </head>
 <body>
 <div class="wrap">

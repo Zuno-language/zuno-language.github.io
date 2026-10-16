@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Reset your password · Zuno</title>
+<meta name="theme-color" content="#181A2F">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Only one of the three messages shows; the script picks it. Nothing else from the site is linked here. */
+  .msg { display: none; }
+  .btn { display: inline-block; margin-top: 18px; padding: 12px 22px; border-radius: 999px; background: #FDA481; color: #181A2F; font-weight: 600; text-decoration: none; }
+  .small { color: var(--text-2); font-size: 14px; margin-top: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<main>
+<div class="center">
+<img src="assets/wordmark.png" alt="Zuno" style="max-width:160px">
+
+<!-- iPhone / iPad: forwarded straight into the app. -->
+<div class="msg" id="phone">
+  <h1 style="font-family:var(--serif);font-weight:600">Opening Zuno…</h1>
+  <p style="color:var(--text-2)">Zuno should open on “Set a new password”.</p>
+  <a class="btn" id="open">Open Zuno</a>
+  <p class="small">Nothing happens? Make sure Zuno is installed on this iPhone, then tap the button.</p>
+</div>
+
+<!-- Computer: the link only works inside the app. -->
+<div class="msg" id="computer">
+  <img src="assets/mascot-reading.png" alt="" style="max-width:180px">
+  <h1 style="font-family:var(--serif);font-weight:600">Open this email on your iPhone</h1>
+  <p style="color:var(--text-2)">Your password is reset in the Zuno app. Open the reset email on the iPhone where Zuno is installed and tap the link there.</p>
+</div>
+
+<!-- Old or already-used link. -->
+<div class="msg" id="expired">
+  <img src="assets/mascot-cloud.png" alt="" style="max-width:180px">
+  <h1 style="font-family:var(--serif);font-weight:600">This link has expired</h1>
+  <p style="color:var(--text-2)">Reset links work once and only for a short time. In Zuno, go to Sign In › Forgot password to get a new one.</p>
+</div>
+
+<noscript><p>Open this email on your iPhone and tap the link there.</p></noscript>
+</div>
+</main>
+</div>
+<script>
+  // Supabase sends the learner here after checking the reset link (?code=… or #access_token=…).
+  // Everything after the address is passed on unchanged to the app's own link.
+  var params = location.search + location.hash;
+  var expired = /error_code=otp_expired|error=access_denied/.test(params);
+  var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var show = function (id) { document.getElementById(id).style.display = 'block'; };
+  if (expired) {
+    show('expired');
+  } else if (ios) {
+    var target = 'zuno://reset-password' + location.search + location.hash;
+    document.getElementById('open').href = target;
+    show('phone');
+    location.replace(target);
+  } else {
+    show('computer');
+  }
+</script>
+</body>
+</html>
