@@ -7,29 +7,52 @@
 <meta name="description" content="Get help with Zuno, the Mandarin learning app.">
 <meta property="og:title" content="Support · Zuno">
 <meta property="og:description" content="Get help with Zuno, the Mandarin learning app.">
-<meta property="og:image" content="assets/screen-home.jpg">
+<meta property="og:image" content="https://zuno-language.github.io/assets/screen-home.webp">
 <meta name="theme-color" content="#181A2F">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="wrap">
-<header class="site"><a href="./"><img src="assets/wordmark.png" alt="Zuno"></a><nav><a href="./">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></nav></header>
+<div class="nav-wrap"><nav class="nav-pill" aria-label="Main">
+  <a class="nav-mark is-shown" href="./" aria-label="Zuno home"><img src="assets/wordmark.webp" alt="Zuno"></a>
+  <a class="nav-link" href="./#loop">How it works</a>
+  <a class="nav-link nav-opt" href="./#levels">Levels</a>
+  <a class="nav-link" href="./#pricing">Pricing</a>
+  <a class="nav-link nav-opt" href="./#faq">FAQ</a>
+  <a class="nav-link" href="support.html" aria-current="page">Support</a>
+</nav></div>
 <main>
 <div class="doc">
-<h1>Support</h1>
-<p class="updated">We're happy to help.</p>
-<p>Questions, a word that sounds wrong, an answer you think should have been accepted, or anything else: email <a href="mailto:clee80609@gmail.com">clee80609@gmail.com</a>. Please mention your iPhone model and, if you can, a screenshot.</p>
+<p class="eyebrow">Support</p>
+<h1>We're happy to help.</h1>
+<div class="contact-card">
+  <p><strong>Email us</strong>Questions, a word that sounds wrong, an answer you think should have been accepted, or anything else. Please mention your iPhone model and, if you can, a screenshot.</p>
+  <a class="pill-btn" href="mailto:clee80609@gmail.com">clee80609@gmail.com</a>
+</div>
 <h2>Frequently asked questions</h2>
-<p><strong>Do I need an account?</strong><br>No. You can start as a guest with the first three conversations. Create a free account to keep going and to keep your progress on all your devices.</p>
-<p><strong>I didn't get the confirmation or password email.</strong><br>Check your spam folder, wait a few minutes, then try again. If it still doesn't arrive, email us.</p>
-<p><strong>Does Zuno work offline?</strong><br>Yes. Lessons and voices are inside the app. Your progress syncs the next time you're online.</p>
-<p><strong>How do I delete my account?</strong><br>In the app: Settings › Profile › Delete my account. It permanently erases your account, profile and progress.</p>
-<p><strong>Which levels are covered?</strong><br>All HSK 1–9 words are in the app. Conversations and recorded voices cover HSK 1–3 today; higher levels are coming.</p>
+<div class="faq">
+  <details><summary>Do I need an account?</summary><p>No. You can start as a guest with the first three conversations. Create a free account to keep going and to keep your progress on all your devices.</p></details>
+  <details><summary>I didn't get the confirmation or password email.</summary><p>Check your spam folder, wait a few minutes, then try again. If it still doesn't arrive, email us.</p></details>
+  <details><summary>Does Zuno work offline?</summary><p>Yes. Lessons and voices are inside the app. Your progress syncs the next time you're online.</p></details>
+  <details><summary>Which levels are covered?</summary><p>All HSK 1–9 words are in the app. Conversations and recorded voices cover HSK 1–3 today; higher levels are coming.</p></details>
+  <details><summary>How do I delete my account?</summary><p>In the app: Settings › Profile › Delete my account. It permanently erases your account, profile and progress.</p></details>
+</div>
 </div>
 </main>
-<footer class="site"><span>© 2026 Zuno · Made by Christopher Biguet</span><span><a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></span></footer>
 </div>
+<footer class="site"><div class="wrap">
+  <div class="row">
+    <img src="assets/wordmark.webp" alt="Zuno">
+    <nav aria-label="Footer"><a class="link-underline" href="support.html">Support</a><a class="link-underline" href="privacy.html">Privacy policy</a><a class="link-underline" href="terms.html">Terms of use</a></nav>
+  </div>
+  <p style="margin:28px 0 0">© 2026 Zuno · Made by <a class="link-underline" href="https://christopherbiguet.com">Christopher Biguet</a></p>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

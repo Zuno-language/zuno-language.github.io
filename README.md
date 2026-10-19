@@ -1,6 +1,6 @@
 # Zuno website
 
-Static site for Zuno (no build step): home, support, privacy policy, terms of use, the
+Static site for Zuno (no build step; fonts and Lenis smooth scroll load from CDNs): home, support, privacy policy, terms of use, the
 "email confirmed" page that sign-up confirmation links land on, and a 404 page.
 Colours match the app (`Zuno/DesignSystem.swift`). Support email: clee80609@gmail.com.
 

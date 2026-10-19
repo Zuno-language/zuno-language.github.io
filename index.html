@@ -3,48 +3,252 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zuno: learn Mandarin 5 minutes per day</title>
-<meta name="description" content="Zuno teaches HSK vocabulary through short real-life conversations, with recorded voices. For iPhone.">
-<meta property="og:title" content="Zuno: learn Mandarin 5 minutes per day">
-<meta property="og:description" content="Zuno teaches HSK vocabulary through short real-life conversations, with recorded voices. For iPhone.">
-<meta property="og:image" content="assets/screen-home.jpg">
+<title>Zuno · Learn Mandarin five minutes a day</title>
+<meta name="description" content="Zuno teaches the official HSK vocabulary, then puts every new word into a short real-life conversation, with natural recorded voices. For iPhone.">
+<link rel="canonical" href="https://zuno-language.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zuno-language.github.io/">
+<meta property="og:title" content="Zuno · Learn Mandarin five minutes a day">
+<meta property="og:description" content="HSK vocabulary, real-life conversations and recorded voices. For iPhone.">
+<meta property="og:image" content="https://zuno-language.github.io/assets/screen-home.webp">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#181A2F">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/screen-home.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Zuno: Flashcards & Translation","operatingSystem":"iOS","applicationCategory":"EducationalApplication","description":"Learn Mandarin Chinese with HSK flashcards, real-life conversations and recorded voices.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Christopher Biguet"}}
+</script>
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a href="./"><img src="assets/wordmark.png" alt="Zuno"></a><nav><a href="./" aria-current="page">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></header>
+<div class="nav-wrap"><nav class="nav-pill" aria-label="Main">
+  <a class="nav-mark" href="./" aria-label="Zuno home"><img src="assets/wordmark.webp" alt="Zuno"></a>
+  <a class="nav-link" href="#loop">How it works</a>
+  <a class="nav-link nav-opt" href="#levels">Levels</a>
+  <a class="nav-link" href="#pricing">Pricing</a>
+  <a class="nav-link nav-opt" href="#faq">FAQ</a>
+  <a class="nav-link" href="support.html">Support</a>
+</nav></div>
+
 <main>
-<div class="hero">
-  <div>
-    <h1>Learn Mandarin<br>5 minutes per day.</h1>
-    <p class="lead">Zuno teaches the official HSK vocabulary, then puts every new word straight into a short real-life conversation, with natural recorded voices.</p>
-    <span class="badge">Coming soon to the App Store</span>
-    <p class="note">For iPhone. Free to start, with a guest mode, no account needed.</p>
+<!-- 1 · Opening: what Zuno is, shown with a real card -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="reveal" src="assets/wordmark.webp" alt="Zuno" style="height:64px;width:auto">
+      <p class="eyebrow reveal" data-delay="80" style="margin-top:36px">Mandarin Chinese · HSK · iPhone</p>
+      <h1 class="display reveal" data-delay="160">Learn Mandarin, <em>five minutes a&nbsp;day.</em></h1>
+      <p class="lead reveal" data-delay="260">Zuno teaches the official HSK vocabulary, then puts every new word straight into a short real-life conversation, spoken by natural recorded voices.</p>
+      <div class="actions reveal" data-delay="360">
+        <span class="store-badge" aria-label="Coming soon to the App Store">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.28 1.86-3.38 1.95-3.43-1.06-1.55-2.71-1.77-3.3-1.79-1.4-.14-2.74.83-3.45.83-.71 0-1.81-.81-2.97-.79-1.53.02-2.94.89-3.73 2.26-1.59 2.76-.41 6.85 1.14 9.09.76 1.1 1.66 2.33 2.85 2.29 1.14-.05 1.58-.74 2.96-.74 1.38 0 1.77.74 2.98.71 1.23-.02 2.01-1.12 2.76-2.22.87-1.27 1.23-2.5 1.25-2.57-.03-.01-2.4-.92-2.44-3.64zM14.1 5.9c.63-.76 1.05-1.82.94-2.88-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.75-.95 2.79 1 .08 2.03-.51 2.66-1.27z"/></svg>
+          <span><small>Coming soon to the</small><strong>App Store</strong></span>
+        </span>
+        <a class="cta" href="#try">Try a line <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="note reveal" data-delay="420">Free to start, with a guest mode. No account needed.</p>
+    </div>
+    <div class="hero-visual reveal" data-delay="200">
+      <div class="phone" aria-hidden="true"><img src="assets/screen-home.webp" alt=""></div>
+      <button class="flip" type="button" aria-label="Flashcard 你好, nǐ hǎo. Tap to see the meaning: hello.">
+        <span class="flip-inner">
+          <span class="flip-face"><span class="zh">你好</span><span class="py">nǐ hǎo</span></span>
+          <span class="flip-face flip-back"><span class="en">hello</span><span class="py">HSK 1</span></span>
+        </span>
+      </button>
+    </div>
   </div>
-  <img src="assets/mascot-reading.png" alt="Zuno's pangolin reading a book">
-</div>
-<section>
-  <h2>How it works</h2>
-  <div class="cards">
-    <div class="card"><h3>Learn</h3><p>Flashcards with spaced repetition: 10 new words and 5 reviews a day, each one spoken aloud.</p></div>
-    <div class="card"><h3>Translate</h3><p>Six-line conversations from real situations that use only the words you've already learned. Pass 4 of 6 lines to open the next one.</p></div>
-    <div class="card"><h3>Stay motivated</h3><p>A daily path, streaks, Chinese mastery titles and mythic creatures to collect, all kept as a surprise until you earn them.</p></div>
+</header>
+
+<!-- 2 · The daily loop: one story, each screen in context -->
+<section class="block" id="loop">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="display reveal" data-delay="120">One short loop, <em>every day.</em></h2>
+    </div>
+    <div class="loop">
+      <div class="loop-stage" aria-hidden="true">
+        <div class="phone">
+          <img class="is-active" src="assets/screen-learn.webp" alt="" loading="lazy">
+          <img src="assets/screen-translate.webp" alt="" loading="lazy">
+          <img src="assets/screen-home.webp" alt="" loading="lazy">
+          <img src="assets/screen-rewards.webp" alt="" loading="lazy">
+        </div>
+      </div>
+      <ol class="loop-steps">
+        <li class="loop-step" data-screen="0">
+          <span class="loop-num">Learn</span>
+          <h3>Ten new words, five reviews.</h3>
+          <p>Flashcards with spaced repetition, each word spoken aloud by a recorded voice. Know it on sight and it's learned at once; otherwise it comes back until it sticks.</p>
+          <div class="phone loop-inline" aria-hidden="true"><img src="assets/screen-learn.webp" alt="" loading="lazy"></div>
+        </li>
+        <li class="loop-step" data-screen="1">
+          <span class="loop-num">Translate</span>
+          <h3>Use them in a real conversation.</h3>
+          <p>Six-line conversations from everyday life, built only from words you already know. Get four lines right in one go to open the next one.</p>
+          <div class="phone loop-inline" aria-hidden="true"><img src="assets/screen-translate.webp" alt="" loading="lazy"></div>
+        </li>
+        <li class="loop-step" data-screen="2">
+          <span class="loop-num">Your path</span>
+          <h3>Watch the days add up.</h3>
+          <p>Daily goal rings, a streak and a monthly learning path. Miss a day and a streak freeze can save it.</p>
+          <div class="phone loop-inline" aria-hidden="true"><img src="assets/screen-home.webp" alt="" loading="lazy"></div>
+        </li>
+        <li class="loop-step" data-screen="3">
+          <span class="loop-num">Rewards</span>
+          <h3>Earn titles and creatures.</h3>
+          <p>Chinese mastery titles and mythic creatures to collect, each one kept a surprise until you earn it.</p>
+          <div class="phone loop-inline" aria-hidden="true"><img src="assets/screen-rewards.webp" alt="" loading="lazy"></div>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
-<section>
-  <h2>A look inside</h2>
-  <div class="screens">
-    <figure><img src="assets/screen-home.jpg" alt="Zuno home screen" loading="lazy"><figcaption>Your daily goal</figcaption></figure>
-    <figure><img src="assets/screen-learn.jpg" alt="A Zuno flashcard" loading="lazy"><figcaption>Learn</figcaption></figure>
-    <figure><img src="assets/screen-translate.jpg" alt="A Zuno conversation line answered correctly" loading="lazy"><figcaption>Translate</figcaption></figure>
-    <figure><img src="assets/screen-rewards.jpg" alt="Zuno rewards" loading="lazy"><figcaption>Rewards</figcaption></figure>
+
+<!-- 3 · Try a line: the product, hands on -->
+<section class="block try" id="try">
+  <div class="wrap try-grid">
+    <div>
+      <p class="eyebrow reveal">Try a line</p>
+      <h2 class="display reveal" data-delay="120">This is what a lesson <em>feels like.</em></h2>
+      <p class="lead reveal" data-delay="200">A real first line from Zuno's HSK 1 conversations. Type what you think it means, or reveal the answer.</p>
+    </div>
+    <form class="line-card reveal" data-delay="160" id="line" autocomplete="off">
+      <p class="line-meta">HSK 1 · Stage 1 · Line 1 of 6</p>
+      <p class="line-zh" lang="zh-Hans">你家在哪里？</p>
+      <p class="line-py">nǐ jiā zài nǎlǐ?</p>
+      <label class="sr-only" for="line-input">Your translation</label>
+      <input id="line-input" class="line-input" type="text" placeholder="Type your translation…" spellcheck="false">
+      <div class="line-actions">
+        <button class="pill-btn" type="submit">Check</button>
+        <button class="cta" type="button" id="line-reveal">Reveal</button>
+      </div>
+      <p class="line-verdict" id="line-verdict" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- 4 · The HSK ladder: is it for my level? -->
+<section class="block" id="levels">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Levels</p>
+      <h2 class="display reveal" data-delay="120">Every HSK word, <em>from your first one.</em></h2>
+      <p class="lead reveal" data-delay="200">All 10,057 words of HSK 1–9 are in the app. Conversations and recorded voices cover HSK 1–3 today, and higher levels are on the way.</p>
+    </div>
+    <div class="ladder reveal" data-delay="120" role="list">
+      <div class="rung live" role="listitem" style="--h:22%"><b>1</b><span>294</span></div>
+      <div class="rung live" role="listitem" style="--h:30%"><b>2</b><span>197</span></div>
+      <div class="rung live" role="listitem" style="--h:38%"><b>3</b><span>487</span></div>
+      <div class="rung" role="listitem" style="--h:47%"><b>4</b><span>972</span></div>
+      <div class="rung" role="listitem" style="--h:56%"><b>5</b><span>1,547</span></div>
+      <div class="rung" role="listitem" style="--h:65%"><b>6</b><span>1,684</span></div>
+      <div class="rung" role="listitem" style="--h:74%"><b>7</b><span>1,626</span></div>
+      <div class="rung" role="listitem" style="--h:83%"><b>8</b><span>1,625</span></div>
+      <div class="rung" role="listitem" style="--h:92%"><b>9</b><span>1,625</span></div>
+    </div>
+    <div class="ladder-key reveal" data-delay="200">
+      <span><i class="key live"></i>Words, conversations and recorded voices</span>
+      <span><i class="key"></i>Words · conversations coming</span>
+      <span class="muted">Numbers = words per level · 660 conversation lines · 4 recorded voices</span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Why it works -->
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="section-head why-head">
+      <div>
+        <p class="eyebrow reveal">Why it works</p>
+        <h2 class="display reveal" data-delay="120">Built around <em>real Mandarin.</em></h2>
+      </div>
+      <img class="reveal" data-delay="200" src="assets/mascot-reading.webp" alt="Zuno's pangolin reading" loading="lazy">
+    </div>
+    <div class="principles">
+      <article class="principle reveal"><span class="glyph" lang="zh-Hans" aria-hidden="true">听</span><h3>Real voices</h3><p>Natural recorded voices for every HSK 1–3 word and sentence, not robotic speech.</p></article>
+      <article class="principle reveal" data-delay="100"><span class="glyph" lang="zh-Hans" aria-hidden="true">懂</span><h3>Meaning first</h3><p>Answers are checked for meaning, not word for word. Close enough counts as “Almost”.</p></article>
+      <article class="principle reveal" data-delay="200"><span class="glyph" lang="zh-Hans" aria-hidden="true">随</span><h3>Anywhere</h3><p>Works offline. Your progress syncs across your iPhones when you're back online.</p></article>
+      <article class="principle reveal" data-delay="300"><span class="glyph" lang="zh-Hans" aria-hidden="true">言</span><h3>Your language</h3><p>In English or French, with Simplified characters and pinyin.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Free, honestly -->
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Pricing</p>
+      <h2 class="display reveal" data-delay="120">Free, <em>honestly.</em></h2>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Free</h3>
+        <p class="plan-tag">Every lesson</p>
+        <ul><li>All words, conversations and voices</li><li>Short ads only at natural breaks, never over a card or an answer</li><li>Start as a guest, no account needed</li></ul>
+      </div>
+      <div class="plan plan-accent reveal" data-delay="120">
+        <h3>No ads for life</h3>
+        <p class="plan-tag">One-time purchase</p>
+        <ul><li>Everything in Free</li><li>No ads, ever</li><li>No subscription</li></ul>
+      </div>
+      <div class="plan reveal" data-delay="240">
+        <h3>Your data</h3>
+        <p class="plan-tag">Yours to keep or delete</p>
+        <ul><li>A free account keeps your progress on all your devices</li><li>Delete your account any time in Settings</li><li><a class="link-underline" href="privacy.html">Read the privacy policy</a></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · FAQ -->
+<section class="block" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="display reveal" data-delay="120">Good to <em>know.</em></h2>
+      <p class="reveal muted" data-delay="200" style="margin-top:20px">Something else? <a class="link-underline" href="support.html">Ask us</a>.</p>
+    </div>
+    <div class="faq reveal" data-delay="160">
+      <details><summary>When can I download it?</summary><p>Zuno is in testing now and coming soon to the App Store for iPhone.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. Start as a guest with the first three conversations, then create a free account to keep going and keep your progress on all your devices.</p></details>
+      <details><summary>Does Zuno work offline?</summary><p>Yes. Lessons and voices are inside the app. Your progress syncs the next time you're online.</p></details>
+      <details><summary>I already know some Mandarin.</summary><p>Take the level test when you start and Zuno opens the levels you already know.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Closing: the first step -->
+<section class="final">
+  <div class="wrap">
+    <img class="reveal" src="assets/mascot-cloud.webp" alt="Zuno's pangolin flying on a cloud" loading="lazy">
+    <p class="proverb reveal" data-delay="80" lang="zh-Hans">千里之行，始于足下</p>
+    <h2 class="display reveal" data-delay="160">A journey of a thousand miles <em>begins with a single step.</em></h2>
+    <div class="final-actions reveal" data-delay="260">
+      <span class="store-badge" aria-label="Coming soon to the App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.28 1.86-3.38 1.95-3.43-1.06-1.55-2.71-1.77-3.3-1.79-1.4-.14-2.74.83-3.45.83-.71 0-1.81-.81-2.97-.79-1.53.02-2.94.89-3.73 2.26-1.59 2.76-.41 6.85 1.14 9.09.76 1.1 1.66 2.33 2.85 2.29 1.14-.05 1.58-.74 2.96-.74 1.38 0 1.77.74 2.98.71 1.23-.02 2.01-1.12 2.76-2.22.87-1.27 1.23-2.5 1.25-2.57-.03-.01-2.4-.92-2.44-3.64zM14.1 5.9c.63-.76 1.05-1.82.94-2.88-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.75-.95 2.79 1 .08 2.03-.51 2.66-1.27z"/></svg>
+        <span><small>Coming soon to the</small><strong>App Store</strong></span>
+      </span>
+      <a class="cta" href="support.html">Questions? Get in touch <span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 </main>
-<footer class="site"><span>© 2026 Zuno · Made by Christopher Biguet</span><span><a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></span></footer>
-</div>
+
+<footer class="site"><div class="wrap">
+  <div class="row">
+    <img src="assets/wordmark.webp" alt="Zuno">
+    <nav aria-label="Footer"><a class="link-underline" href="support.html">Support</a><a class="link-underline" href="privacy.html">Privacy policy</a><a class="link-underline" href="terms.html">Terms of use</a></nav>
+  </div>
+  <p style="margin:28px 0 0">© 2026 Zuno · Made by <a class="link-underline" href="https://christopherbiguet.com">Christopher Biguet</a></p>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
