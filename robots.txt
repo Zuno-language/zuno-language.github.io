@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /reset.html
 Disallow: /confirmed.html
-Sitemap: https://zuno-language.github.io/sitemap.xml
+Sitemap: https://zunolanguages.com/sitemap.xml
