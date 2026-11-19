@@ -8,6 +8,14 @@ The privacy policy and terms are generated from the app's own text (`Zuno_ios/Zu
 the website and the app always say the same thing. Change the text there first, then update
 `privacy.html` / `terms.html` to match.
 
+## French version
+
+Every page has a French copy in `fr/` (same file names). The globe at the top right opens a FR / EN menu that links
+to the same page in the other language and remembers the choice. A first visit from a French browser opens the
+French page automatically (English pages only, until a choice is made in the menu). `404.html` speaks French
+under `/fr/`. When you change English text, change the matching `fr/` page too. The French privacy policy and terms
+are translations; their last line says the English version applies.
+
 ## Where it lives
 
 Live at **https://zunolanguages.com** (custom domain since 2026-10-23, file `CNAME`; Namecheap DNS: 4 `A` records for `@` to GitHub Pages + `CNAME www`; the old https://zuno-language.github.io redirects) — GitHub organization `Zuno-language`, public repository

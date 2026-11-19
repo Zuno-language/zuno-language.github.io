@@ -12,6 +12,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script>
+  // First visit from a French browser: open the French page (a choice made in the globe menu wins).
+  try { if (!localStorage.getItem("zuno-lang") && /^fr\b/i.test(navigator.language || ""))
+    location.replace("fr/" + location.pathname.split("/").pop() + location.search + location.hash); } catch (e) {}
+</script>
 <style>
   /* Only one of the three messages shows; the script picks it. Nothing else from the site is linked here. */
   .msg { display: none; }

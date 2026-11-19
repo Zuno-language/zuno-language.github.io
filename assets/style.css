@@ -305,3 +305,41 @@ footer.site a:hover { color: var(--coral); }
   .rung { transform: none; transition: none; }
   .loop-step { opacity: 1; }
 }
+
+/* ---------- Language menu: a globe at the top right, FR / EN drop down under it ---------- */
+.lang { position: absolute; top: 0; right: 16px; pointer-events: auto; }
+@media (min-width: 768px) { .lang { right: 24px; } }
+.lang summary {
+  list-style: none; cursor: pointer; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: var(--cream);
+  background: rgba(24, 26, 47, 0.72);
+  backdrop-filter: blur(10px) saturate(160%); -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(248, 244, 237, 0.10);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover, .lang[open] summary { color: var(--coral); border-color: rgba(253, 164, 129, 0.45); }
+.lang summary svg { width: 20px; height: 20px; }
+.lang-menu {
+  position: absolute; right: 0; top: calc(100% + 10px); min-width: 168px; padding: 6px; border-radius: 18px;
+  background: rgba(24, 26, 47, 0.94);
+  backdrop-filter: blur(10px) saturate(160%); -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(248, 244, 237, 0.12); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  animation: lang-in 0.22s var(--ease);
+}
+@keyframes lang-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.lang-menu a { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 12px; color: var(--cream); font-size: 14px; line-height: 1.3; transition: background-color 0.2s ease; }
+.lang-menu a:hover { background: rgba(248, 244, 237, 0.08); }
+.lang-menu b { width: 24px; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: var(--text-3); }
+.lang-menu a[aria-current] b { color: var(--coral); }
+.lang-menu a[aria-current]::after { content: "✓"; margin-left: auto; color: var(--coral); }
+/* Narrow screens: the pill moves left so the globe has its own room on the right */
+@media (max-width: 700px) { .nav-wrap { justify-content: flex-start; padding-right: 76px; } }
+@media (max-width: 420px) {
+  .nav-wrap { padding: 0 60px 0 12px; }
+  .nav-mark { display: none; }
+  .nav-link { padding: 9px 8px; }
+  .lang { right: 12px; }
+  .lang summary { width: 42px; height: 42px; }
+}
+@media (max-width: 350px) { .nav-link { padding: 9px 5px; letter-spacing: 0.02em; } .nav-wrap { padding-left: 8px; } }

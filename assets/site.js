@@ -40,6 +40,16 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Language menu (globe): remember the choice, close on a tap outside or Escape
+  var lang = document.querySelector(".lang");
+  if (lang) {
+    lang.querySelectorAll("a[data-lang]").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("zuno-lang", a.dataset.lang); } catch (e) {} });
+    });
+    document.addEventListener("click", function (e) { if (!lang.contains(e.target)) lang.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && lang.open) { lang.open = false; lang.querySelector("summary").focus(); } });
+  }
+
   // Hero flashcard: tap to flip (it also flips on its own)
   var flip = document.querySelector(".flip");
   if (flip) flip.addEventListener("click", function () { flip.classList.toggle("is-flipped"); });
@@ -60,27 +70,41 @@
     steps[0].classList.add("is-current");
   }
 
-  // Try a line: the app's accepted answers for 你家在哪里？ (grammar-drills.json, L1.G04.c1)
+  // Try a line: the app's accepted answers for 你家在哪里？ (grammar-drills.json and drills-fr.json, L1.G04.c1)
   var form = document.getElementById("line");
   if (form) {
-    var accepted = ["Where is your home?", "Where do you live?", "Where's your house?"];
-    var note = "在 + place = “is at”. 哪里 “where” stays at the end.";
+    var fr = document.documentElement.lang === "fr";
+    var t = fr ? {
+      accepted: ["Où est ta maison ?", "Où habites-tu ?", "Ta maison est où ?"],
+      extra: ["Où habitez-vous ?", "Où est votre maison ?", "Tu habites où ?", "Vous habitez où ?"],
+      note: "在 + lieu = « se trouve à ». 哪里 « où » reste à la fin.",
+      near: function (a) { return /\bou\b/.test(a) && /(maison|habit|vis|vivez|domicile|chez)/.test(a); },
+      ok: "Correct !", almost: "Presque !", would: "Zuno accepterait : ", miss: "Pas tout à fait", retry: "Réessaie, ou affiche la réponse.", also: "Aussi accepté : "
+    } : {
+      accepted: ["Where is your home?", "Where do you live?", "Where's your house?"],
+      extra: [],
+      note: "在 + place = “is at”. 哪里 “where” stays at the end.",
+      near: function (a) { return /where/.test(a) && /(home|house|live)/.test(a); },
+      ok: "Correct!", almost: "Almost!", would: "Zuno would accept: ", miss: "Not quite", retry: "Try again, or reveal the answer.", also: "Also accepted: "
+    };
     var input = document.getElementById("line-input");
     var out = document.getElementById("line-verdict");
-    var norm = function (t) { return t.toLowerCase().replace(/[’']/g, "'").replace(/where's/g, "where is").replace(/[^a-z ]/g, "").replace(/\s+/g, " ").trim(); };
+    var norm = function (s) {
+      s = s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’']/g, "'").replace(/where's/g, "where is");
+      return s.replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+    };
     var show = function (cls, title, text) { out.className = "line-verdict " + cls; out.innerHTML = "<b>" + title + "</b>" + text; };
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var a = norm(input.value);
       if (!a) { input.focus(); return; }
-      var ok = accepted.some(function (x) { return norm(x) === a; });
-      var near = !ok && /where/.test(a) && /(home|house|live)/.test(a);
-      if (ok) show("hit", "Correct!", note);
-      else if (near) show("hit", "Almost!", "Zuno would accept: " + accepted[0]);
-      else show("miss", "Not quite", "Try again, or reveal the answer.");
+      var ok = t.accepted.concat(t.extra).some(function (x) { return norm(x) === a; });
+      if (ok) show("hit", t.ok, t.note);
+      else if (t.near(a)) show("hit", t.almost, t.would + t.accepted[0]);
+      else show("miss", t.miss, t.retry);
     });
     document.getElementById("line-reveal").addEventListener("click", function () {
-      show("hit", accepted[0], "Also accepted: " + accepted.slice(1).join(" · ") + "<br>" + note);
+      show("hit", t.accepted[0], t.also + t.accepted.slice(1).join(" · ") + "<br>" + t.note);
     });
   }
 

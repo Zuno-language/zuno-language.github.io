@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zunolanguages.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://zunolanguages.com/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://zunolanguages.com/fr/"/><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://zunolanguages.com/fr/</loc><xhtml:link rel="alternate" hreflang="en" href="https://zunolanguages.com/"/><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://zunolanguages.com/support.html</loc><priority>0.6</priority></url>
+  <url><loc>https://zunolanguages.com/fr/support.html</loc><priority>0.6</priority></url>
   <url><loc>https://zunolanguages.com/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://zunolanguages.com/fr/privacy.html</loc><priority>0.3</priority></url>
   <url><loc>https://zunolanguages.com/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://zunolanguages.com/fr/terms.html</loc><priority>0.3</priority></url>
 </urlset>
